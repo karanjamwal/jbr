@@ -1,0 +1,120 @@
+<html>
+<head>
+    <base href="/">
+    <title>Scott Services Job Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
+    <!-- 1. Load libraries -->
+    <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <!-- 2. Configure SystemJS -->
+    <script src="systemjs.config.js"></script>
+    <script>
+        System.import('app').catch(function(err){ console.error(err); });
+    </script>
+
+    <!-- 3. Configure Bootstrap -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/lib/bootstrap_mod/bootstrap.css" rel="stylesheet">
+    <link href="/lib/bootstrap_mod/custom.css" rel="stylesheet">
+    <link href="/lib/shared/style.css" rel="stylesheet">
+
+    <!-- DataTables CSS -->
+    <link href="lib/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="lib/sb_admin/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Time Picker -->
+    <link href="lib/timepicker/bootstrap-timepicker.css" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap Select -->
+    <link href="node_modules/bootstrap-select/dist/css/bootstrap-select.css" rel="stylesheet" type="text/css">
+
+    <!-- Magnific Popup core CSS file -->
+    <link rel="stylesheet" href="node_modules/magnific-popup/dist/magnific-popup.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="manifest" href="/manifest.json">
+    <script>
+        (function(p,u,s,h,x){p.pushpad=p.pushpad||function(){(p.pushpad.q=p.pushpad.q||[]).push(arguments)};h=u.getElementsByTagName('head')[0];x=u.createElement('script');x.async=1;x.src=s;h.appendChild(x);})(window,document,'https://pushpad.xyz/pushpad.js');
+    </script>
+</head>
+
+<!-- 4. Display the application -->
+<body>
+<div id="wrapper">
+    <my-app>Loading...</my-app>
+</div>
+
+<!-- jQuery -->
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+<!-- jQuery UI -->
+<script src="node_modules/jquery-ui-dist/jquery-ui.js"></script>
+
+<!-- jQuery - Typeahead -->
+<script src="lib/jQuery_plugins/typeahead/typeahead.bundle.min.js"></script>
+
+<!-- Lodash -->
+<script src="node_modules/lodash/lodash.min.js"></script>
+
+<!-- Moment JS -->
+<script src="node_modules/moment/min/moment.min.js"></script>
+<script src="node_modules/moment-timezone/builds/moment-timezone-with-data.min.js"></script>
+<script src="node_modules/moment-duration-format/lib/moment-duration-format.js"></script>
+<script src="node_modules/moment-range/dist/moment-range.js"></script>
+
+<!-- jQuery - Pikaday -->
+<script src="lib/jQuery_plugins/pikaday/pikaday.js"></script>
+<script src="lib/jQuery_plugins/pikaday/pikaday.jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<!-- DataTables JavaScript -->
+<script src="lib/datatables/media/js/jquery.dataTables.min.js"></script>
+<script src="lib/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="lib/sb_admin/js/sb-admin-2.js"></script>
+
+<!-- socket io -->
+<script src="node_modules/socket.io-client/dist/socket.io.min.js"></script>
+
+
+<!-- SJCL -->
+<script src="lib/sjcl/sjcl.js"></script>
+
+<!-- bootstrap timepicker -->
+<script src="lib/timepicker/bootstrap-timepicker.js"></script>
+
+<!-- bootstrap select -->
+<script src="node_modules/bootstrap-select/dist/js/bootstrap-select.js"></script>
+
+<!-- Magnific Popup core JS file -->
+<script src="node_modules/magnific-popup/dist/jquery.magnific-popup.js"></script>
+
+<script src="node_modules/css-element-queries/src/ResizeSensor.js"></script>
+<script src="node_modules/css-element-queries/src/ElementQueries.js"></script>
+<script>
+    ElementQueries.listen();
+    ElementQueries.init();
+</script>
+
+</body>
+</html>

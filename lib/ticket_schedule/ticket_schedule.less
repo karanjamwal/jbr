@@ -1,0 +1,136 @@
+@import "../../node_modules/bootstrap/less/mixins.less";
+
+@region-color-primary: #636363;
+@region-color-secondary: #fff;
+
+@prev-btn-color: #7e7e7e;
+@prev-btn-bg: #e4e4e4;
+@prev-btn-border: darken(@prev-btn-bg, 10%);
+@prev-hd-color: #a0a0a0;
+@prev-hd-bg: #fff;
+
+@today-btn-color: #fff;
+@today-btn-bg: #0072bc;
+@today-btn-border: darken(@today-btn-bg, 10%);
+@today-hd-color: #2a456e;
+@today-hd-bg: #ebebeb;
+
+@next-btn-color: #fff;
+@next-btn-bg: #656c7e;
+@next-btn-border: darken(@next-btn-bg, 10%);
+@next-hd-color: #5b5b5b;
+@next-hd-bg: #fff;
+
+@border-radius: 10px;
+
+.week-navbar {
+  padding-bottom: 20px;
+  display: flex;
+
+  > div:first-child, > div:last-child {
+    align-self: center;
+  }
+
+  .region-select {
+    text-transform: uppercase;
+    text-align: center;
+
+    > div:first-child {
+      font-size: 14px;
+      font-weight: 500;
+      color: @region-color-primary;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.weekHeader th {
+  text-align: center;
+}
+
+.region-name {
+  vertical-align: middle;
+  font-weight: 500;
+}
+
+.btn-region {
+  color: @region-color-primary;
+  background-color: @region-color-secondary;
+  border-color: @region-color-primary;
+
+  &:hover {
+    background-color: darken(@region-color-secondary, 10%);
+  }
+
+  &:active,
+  &.active {
+    color: @region-color-secondary;
+    background-color: @region-color-primary;
+  }
+}
+
+td {
+  div {
+    margin-bottom: 8px;
+  }
+
+  div:last-child {
+    margin-bottom: 0;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+th {
+  background-color: #fff;
+  font-weight: 400;
+}
+
+th.previous, td.previous {
+  background-color: @prev-hd-bg;
+  color: @prev-hd-color;
+
+  button {
+    .button-variant(@prev-btn-color; @prev-btn-bg; @prev-btn-border);
+  }
+}
+
+th.today, td.today {
+  background-color: @today-hd-bg;
+  color: @today-hd-color;
+
+  button {
+    .button-variant(@today-btn-color; @today-btn-bg; @today-btn-border);
+  }
+}
+
+th.upcoming, td.upcoming {
+  background-color: @next-hd-bg;
+  color: @next-hd-color;
+
+  button {
+    .button-variant(@next-btn-color; @next-btn-bg; @next-btn-border);
+  }
+}
+
+.unscheduled-jobs-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (max-width: 767px) {
+    width: 100%;
+  }
+}
+
+.unscheduled-jobs {
+  border-top-left-radius: @border-radius;
+  border-top-right-radius: @border-radius;
+  background-color: #fff;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
+}
+
+// lessc lib/ticket_schedule/ticket_schedule.less lib/ticket_schedule/ticket_schedule.css

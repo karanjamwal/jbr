@@ -1,0 +1,73 @@
+<nav class="navbar navbar-default navbar-static-top navbar-custom" role="navigation" style="margin-bottom: 0">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <!-- TODO : Wire-up Angular Navigation -->
+        <a class="navbar-brand" href="index.html" style="color:white;">
+            <span>Scott <img src="/assets/images/nav/bolt.png"> Services Job Dashboard</span>
+        </a>
+        <!--<a class="navbar-brand" href="index.html"><img src="http://www.scottservices.com/images/scottlogo1.jpg" style="height:23px" /></a>-->
+    </div>
+    <!-- /.navbar-header -->
+
+    <ul class="nav navbar-top-links navbar-right">
+        <li>
+            <a routerLink="dashboard"
+               [ngClass]="{'active': currentNav == 'dashboard' }"
+               (click)="onNavSelected('dashboard')">
+                <img src="/assets/images/nav/dashboard.png">
+                <span>Dashboard</span>
+            </a>
+        </li>
+        <li>
+            <a routerLink="job/schedule"
+               [ngClass]="{'active': currentNav == 'schedule' }"
+               (click)="onNavSelected('schedule')">
+                <img src="/assets/images/nav/schedule.png">
+                <span>Schedule</span>
+            </a>
+        </li>
+        <!--<li>
+            <a [routerLink]="['CompletedTickets']" class="active"><i class="fa  fa-check-square fa-fw"></i> <span *ngIf="completedTickets">({{completedTickets.length}})</span> Completed Jobs</a>
+        </li>-->
+        <li>
+            <!--<a routerLink="ticket/history" class="active"><i class="fa fa-history fa-fw"></i> Job History</a>-->
+            <a>
+                <img src="/assets/images/nav/history.png">
+                <span>Job History</span>
+            </a>
+        </li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                <img src="/assets/images/nav/user.png">
+                <span><i class="fa fa-angle-down fa-fw"></i>&nbsp;</span>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+                <li>
+                    <a>
+                        <i class="fa fa-user fa-fw"></i>
+                        <span id='userNameLabel'>{{userName}}</span>
+                    </a>
+                </li>
+                <li class="divider">
+                </li>
+                <li id="users-li">
+                    <a routerLink="users">
+                        <i class="fa fa-users fa-fw"></i> Users
+                    </a>
+                </li>
+                <li>
+                    <a (click)="onLogout()">
+                        <i class="fa fa-sign-out fa-fw"></i> Logout
+                    </a>
+                </li>
+            </ul>
+            <!-- /.dropdown-user -->
+        </li>
+    </ul>
+    <!-- /.navbar-top-links -->
+</nav>

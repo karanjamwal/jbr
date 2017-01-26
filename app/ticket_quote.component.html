@@ -1,0 +1,191 @@
+<!-- LOADING ANIMATION -->
+<div class="row">
+    <div class="row" id="loadingProgressBar" style="display:none;">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+            <div class="progress">
+                <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                     aria-valuemax="100" style="width: 100%">
+                    <span class="sr-only">40% Complete (success)</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+</div>
+
+<div class="col-xs-12 quote-wrapper" *ngIf="selectedTicket">
+    <div class="row">
+        <div class="col-md-9 materials-section">
+            <div class="row vertical-padding header">
+                <div class="col-sm-12">
+                    <div>
+                        <div>
+                            <span class="customer-name">{{ selectedTicket.customer.customerName }}</span>
+                        </div>
+                        <div>
+                            <span class="address">
+                                {{ selectedTicket.customer.shippingAddressLine2 +
+                                selectedTicket.customer.billingCity + ", " +
+                                selectedTicket.customer.billingState + " " +
+                                selectedTicket.customer.billingPostalCode }}
+                            </span>
+                        </div>
+                    </div>
+                    <a class="btn btn-edit">
+                        <img src="/assets/images/ticket/quote/pencil.png">
+                    </a>
+                </div>
+            </div>
+            <div class="row material-category">
+                <div class="col-sm-12 vertical-padding category-title">
+                    <span class="text-uppercase">
+                        MH Lamps
+                    </span>
+                </div>
+                <div class="col-sm-12 material-list">
+                    <div class="row vertical-padding">
+                        <div class="col-sm-4">
+                            <span>100W Med</span>
+                        </div>
+                        <div class="col-sm-4">
+                            <span>$2.50 each</span>
+                        </div>
+                        <div class="col-sm-4">
+                            <span>$2.50</span>
+                        </div>
+                    </div>
+                    <div class="row vertical-padding">
+                        <div class="col-sm-4">
+                            <span>100W Med</span>
+                        </div>
+                        <div class="col-sm-4">
+                            <span>$2.50 each</span>
+                        </div>
+                        <div class="col-sm-4">
+                            <span>$2.50</span>
+                        </div>
+                    </div>
+                    <div class="row vertical-padding">
+                        <div class="col-sm-4">
+                            <span>100W Med</span>
+                        </div>
+                        <div class="col-sm-4">
+                            <span>$2.50 each</span>
+                        </div>
+                        <div class="col-sm-4">
+                            <span>$2.50</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row material-category">
+                <div class="col-sm-12 vertical-padding category-title">
+                    <span class="text-uppercase">
+                        MH Lamps
+                    </span>
+                </div>
+                <div class="col-sm-12 material-list">
+                    <div class="row vertical-padding">
+                        <div class="col-sm-4">
+                            <span>100W Med</span>
+                        </div>
+                        <div class="col-sm-4">
+                            <span>$2.50 each</span>
+                        </div>
+                        <div class="col-sm-4">
+                            <span>$2.50</span>
+                        </div>
+                    </div>
+                    <div class="row vertical-padding">
+                        <div class="col-sm-4">
+                            <span>100W Med</span>
+                        </div>
+                        <div class="col-sm-4">
+                            <span>$2.50 each</span>
+                        </div>
+                        <div class="col-sm-4">
+                            <span>$2.50</span>
+                        </div>
+                    </div>
+                    <div class="row vertical-padding">
+                        <div class="col-sm-4">
+                            <span>100W Med</span>
+                        </div>
+                        <div class="col-sm-4">
+                            <span>$2.50 each</span>
+                        </div>
+                        <div class="col-sm-4">
+                            <span>$2.50</span>
+                        </div>
+                    </div>
+                    <div class="row vertical-padding">
+                        <div class="col-sm-4">
+                            <span>100W Med</span>
+                        </div>
+                        <div class="col-sm-4">
+                            <span>$2.50 each</span>
+                        </div>
+                        <div class="col-sm-4">
+                            <span>$2.50</span>
+                        </div>
+                    </div>
+                    <div class="row vertical-padding">
+                        <div class="col-sm-4">
+                            <span>100W Med</span>
+                        </div>
+                        <div class="col-sm-4">
+                            <span>$2.50 each</span>
+                        </div>
+                        <div class="col-sm-4">
+                            <span>$2.50</span>
+                        </div>
+                    </div>
+                    <div class="row vertical-padding">
+                        <div class="col-sm-4">
+                            <span>100W Med</span>
+                        </div>
+                        <div class="col-sm-4">
+                            <span>$2.50 each</span>
+                        </div>
+                        <div class="col-sm-4">
+                            <span>$2.50</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 quote-section vertical-padding">
+            <div class="header text-center">
+                <span class="text-uppercase">Job Quote</span>
+                <hr>
+            </div>
+            <div class="quote-item">
+                <span>Do Not Exceed</span>
+                <span>$1,800.00</span>
+            </div>
+            <div class="quote-item">
+                <span>Material Total</span>
+                <span>$800.00</span>
+            </div>
+            <div class="quote-item">
+                <span>Labor Total</span>
+                <span>$800.00</span>
+            </div>
+            <div class="quote-item">
+                <span>Travel Time</span>
+                <span>$120.00</span>
+            </div>
+            <div class="quote-total">
+                <span>Total</span>
+                <span>$1,720.00</span>
+            </div>
+            <div class="quote-notes">
+                <textarea placeholder="Add Notes"></textarea>
+            </div>
+            <button class="btn btn-default btn-quote">
+                Quote Complete
+            </button>
+        </div>
+    </div>
+</div>

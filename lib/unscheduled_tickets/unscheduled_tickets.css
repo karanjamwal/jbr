@@ -1,0 +1,103 @@
+.header {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #363636;
+  padding: 15px;
+  color: #f9cb61;
+}
+.header span {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.header a {
+  font-size: 25px;
+  cursor: pointer;
+}
+.body {
+  padding: 10px;
+  overflow: scroll;
+  height: 182px;
+}
+.body > div {
+  background-color: #e9e9e9;
+  border: 1px solid #c2c2c2;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 2px;
+  color: #2b2b2b;
+  overflow: auto;
+  display: flex;
+}
+.body > div > div {
+  flex: 1;
+}
+.body > div > div .customer-name {
+  font-size: 22px;
+}
+.body > div > div .description {
+  font-size: 12px;
+}
+.body > div > a {
+  align-self: center;
+}
+.body > div .btn-po-number {
+  color: #2b2b2b;
+  background-color: #ffcb2c;
+  border-color: #ffcb2c;
+  border-radius: 9999px;
+}
+.body > div .btn-po-number:focus,
+.body > div .btn-po-number.focus {
+  color: #2b2b2b;
+  background-color: #f8bb00;
+  border-color: #ac8100;
+}
+.body > div .btn-po-number:hover {
+  color: #2b2b2b;
+  background-color: #f8bb00;
+  border-color: #eeb300;
+}
+.body > div .btn-po-number:active,
+.body > div .btn-po-number.active,
+.open > .dropdown-toggle.body > div .btn-po-number {
+  color: #2b2b2b;
+  background-color: #f8bb00;
+  border-color: #eeb300;
+}
+.body > div .btn-po-number:active:hover,
+.body > div .btn-po-number.active:hover,
+.open > .dropdown-toggle.body > div .btn-po-number:hover,
+.body > div .btn-po-number:active:focus,
+.body > div .btn-po-number.active:focus,
+.open > .dropdown-toggle.body > div .btn-po-number:focus,
+.body > div .btn-po-number:active.focus,
+.body > div .btn-po-number.active.focus,
+.open > .dropdown-toggle.body > div .btn-po-number.focus {
+  color: #2b2b2b;
+  background-color: #d4a000;
+  border-color: #ac8100;
+}
+.body > div .btn-po-number:active,
+.body > div .btn-po-number.active,
+.open > .dropdown-toggle.body > div .btn-po-number {
+  background-image: none;
+}
+.body > div .btn-po-number.disabled:hover,
+.body > div .btn-po-number[disabled]:hover,
+fieldset[disabled] .body > div .btn-po-number:hover,
+.body > div .btn-po-number.disabled:focus,
+.body > div .btn-po-number[disabled]:focus,
+fieldset[disabled] .body > div .btn-po-number:focus,
+.body > div .btn-po-number.disabled.focus,
+.body > div .btn-po-number[disabled].focus,
+fieldset[disabled] .body > div .btn-po-number.focus {
+  background-color: #ffcb2c;
+  border-color: #ffcb2c;
+}
+.body > div .btn-po-number .badge {
+  color: #ffcb2c;
+  background-color: #2b2b2b;
+}
+.body > div:last-child {
+  margin-bottom: 0;
+}

@@ -1,0 +1,140 @@
+@border-radius-small:       3px;
+@border-radius-base:        4px;
+@border-radius-large:       6px;
+@border-radius-extra-large: 10px;
+
+@header-bg: #ebebeb;
+@body-color-separator: @header-bg;
+@body-bg: #fff;
+@body-color-extra-light: #d7d7d7;
+@body-color-light: #b7b7b7;
+@body-color-base: #9a9a9a;
+@body-color-dark: #7b7b7b;
+@body-color-extra-dark: #4e4e4e;
+
+@padding-base: 15px;
+@padding-large: 25px;
+
+@margin-base: 15px;
+@margin-large: 25px;
+
+@font-size-base:          14px;
+@font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
+@font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
+
+.ticket-modal-container {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.ticket-modal-header {
+  background-color: @header-bg;
+  border-radius: @border-radius-large @border-radius-large 0 0;
+  margin: 0;
+  padding: @padding-base;
+  color: #4e4e4e;
+}
+
+.ticket-modal-header-title {
+  font-size: @font-size-large;
+}
+
+.ticket-modal-body {
+  background-color: @body-bg;
+  border-radius: 0 0 @border-radius-large @border-radius-large;
+  padding: 0;
+  margin: 0;
+  color: @body-color-dark;
+
+  &> div {
+    padding: @padding-base @padding-large @padding-large;
+
+    &> div:first-child {
+      margin-bottom: @margin-base;
+    }
+  }
+}
+
+.upload-section {
+  border-right: @body-color-separator solid 1px;
+}
+
+.btn-create-job {
+  font-size: @font-size-large;
+  padding: 10px 36px;
+  border-radius: @border-radius-large;
+}
+
+.file-drop-zone {
+  border: dashed 2px @body-color-extra-light;
+  border-radius: @border-radius-extra-large;
+  padding: 20px;
+}
+
+.upload-file-over {
+  border-color: @body-color-extra-dark;
+}
+
+.pdf-box {
+  border-radius: @border-radius-base;
+  background-color: @body-color-light;
+  padding: 20px 12px;
+  color: #fff;
+  display: inline-block;
+  letter-spacing: 3px;
+}
+
+.pdf-image {
+  width: 60px;
+  height: 60px;
+}
+
+.upload-section {
+  .content-text {
+    color: @body-color-base;
+
+    .file-name {
+      line-height: 43px;
+      font-size: 12px;
+      color: #4e4e4e;
+    }
+  }
+
+  .file-browse-text {
+    font-size: @font-size-small;
+  }
+
+  .file-browse-text a {
+    text-decoration: underline;
+    color: @body-color-dark;
+    cursor: pointer;
+
+    &:hover {
+      color: @body-color-base;
+    }
+  }
+}
+
+.ticket-modal-body {
+  display: flex;
+
+  &> div, .manual-section > div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.ticket-modal-body, .manual-section {
+  flex-wrap: wrap;
+}
+
+.alert {
+  margin-bottom: 0;
+}
+
+.spacer {
+  margin-top: 20px;
+}
+
+// lessc lib/create_ticket_modal/create_ticket_modal.less lib/create_ticket_modal/create_ticket_modal.css

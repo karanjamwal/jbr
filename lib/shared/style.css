@@ -1,0 +1,25 @@
+.ticket-details-wrapper .stats-collection {
+  margin: 0 -5px;
+}
+.ticket-details-wrapper .stats-collection > div {
+  margin-top: 10px;
+  padding: 0 5px;
+}
+.ticket-details-wrapper .stats-collection > div > a > img {
+  width: 100%;
+  cursor: zoom-in;
+}
+.ticket-details-wrapper .stats-collection > div > a.btn-add-photo {
+  display: block;
+  width: 100%;
+  padding-top: 56.25%;
+  background-color: #e6e6e6;
+  cursor: pointer;
+}
+.ticket-details-wrapper .stats-collection > div > a.btn-add-photo i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #b6b6b6;
+}

@@ -1,0 +1,93 @@
+.ticket-modal-container {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.ticket-modal-header {
+  background-color: #ebebeb;
+  border-radius: 6px 6px 0 0;
+  margin: 0;
+  padding: 15px;
+  color: #4e4e4e;
+}
+.ticket-modal-header-title {
+  font-size: 18px;
+}
+.ticket-modal-body {
+  background-color: #fff;
+  border-radius: 0 0 6px 6px;
+  padding: 0;
+  margin: 0;
+  color: #7b7b7b;
+}
+.ticket-modal-body > div {
+  padding: 15px 25px 25px;
+}
+.ticket-modal-body > div > div:first-child {
+  margin-bottom: 15px;
+}
+.upload-section {
+  border-right: #ebebeb solid 1px;
+}
+.btn-create-job {
+  font-size: 18px;
+  padding: 10px 36px;
+  border-radius: 6px;
+}
+.file-drop-zone {
+  border: dashed 2px #d7d7d7;
+  border-radius: 10px;
+  padding: 20px;
+}
+.upload-file-over {
+  border-color: #4e4e4e;
+}
+.pdf-box {
+  border-radius: 4px;
+  background-color: #b7b7b7;
+  padding: 20px 12px;
+  color: #fff;
+  display: inline-block;
+  letter-spacing: 3px;
+}
+.pdf-image {
+  width: 60px;
+  height: 60px;
+}
+.upload-section .content-text {
+  color: #9a9a9a;
+}
+.upload-section .content-text .file-name {
+  line-height: 43px;
+  font-size: 12px;
+  color: #4e4e4e;
+}
+.upload-section .file-browse-text {
+  font-size: 12px;
+}
+.upload-section .file-browse-text a {
+  text-decoration: underline;
+  color: #7b7b7b;
+  cursor: pointer;
+}
+.upload-section .file-browse-text a:hover {
+  color: #9a9a9a;
+}
+.ticket-modal-body {
+  display: flex;
+}
+.ticket-modal-body > div,
+.ticket-modal-body .manual-section > div {
+  display: flex;
+  flex-direction: column;
+}
+.ticket-modal-body,
+.manual-section {
+  flex-wrap: wrap;
+}
+.alert {
+  margin-bottom: 0;
+}
+.spacer {
+  margin-top: 20px;
+}

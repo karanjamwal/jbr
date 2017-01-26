@@ -1,0 +1,80 @@
+@import "../../node_modules/bootstrap/less/mixins.less";
+
+@border-radius-small: 5px;
+@border-radius-base: 10px;
+@border-radius-max: 9999px;
+@header-bg: #363636;
+@header-color: #f9cb61;
+@header-padding: 15px;
+
+@body-bg: #fff;
+@ticket-color: #2b2b2b;
+@ticket-bg: #e9e9e9;
+@ticket-border: #c2c2c2;
+@ticket-padding: 15px;
+@ticket-spacing: 2px;
+@btn-po-color: @ticket-color;
+@btn-po-bg: #ffcb2c;
+@btn-po-border: @btn-po-bg;
+
+.header {
+  border-top-left-radius: @border-radius-base;
+  border-top-right-radius: @border-radius-base;
+  background-color: @header-bg;
+  padding: @header-padding;
+  color: @header-color;
+
+  span {
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+
+  a {
+    font-size: 25px;
+    cursor: pointer;
+  }
+}
+
+.body {
+  padding: 10px;
+  overflow: scroll;
+  height: 182px;
+
+  > div {
+    background-color: @ticket-bg;
+    border: 1px solid @ticket-border;
+    border-radius: @border-radius-small;
+    padding: @ticket-padding;
+    margin-bottom: @ticket-spacing;
+    color: #2b2b2b;
+    overflow: auto;
+    display: flex;
+
+    > div {
+      flex: 1;
+
+      .customer-name {
+        font-size: 22px;
+      }
+
+      .description {
+        font-size: 12px;
+      }
+    }
+
+    > a {
+      align-self: center;
+    }
+
+    .btn-po-number {
+      .button-variant(@btn-po-color; @btn-po-bg; @btn-po-border);
+      border-radius: @border-radius-max;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// lessc lib/unscheduled_tickets/unscheduled_tickets.less lib/unscheduled_tickets/unscheduled_tickets.css

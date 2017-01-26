@@ -1,0 +1,29 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.login-panel {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 30px 80px;
+  max-width: 457.5px;
+  margin: auto;
+}
+.login-panel img {
+  margin-bottom: 30px;
+}
+.login-panel .form-control {
+  height: 42px;
+}
+.login-panel .alertLogIn {
+  background-color: #fff200;
+  color: black;
+  line-height: 26px;
+  margin-bottom: 15px;
+}
+.login-panel #signinButton {
+  max-width: 457.5px;
+}

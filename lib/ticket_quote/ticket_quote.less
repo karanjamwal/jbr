@@ -1,0 +1,151 @@
+@import "../../node_modules/bootstrap/less/mixins.less";
+
+@border-radius-max: 9999px;
+
+@primary-color: #1c272d;
+@secondary-color: #959595;
+@tertiary-color: #545454;
+
+@primary-bg: #ffffff;
+@secondary-bg: #f6f6f6;
+@tertiary-bg: #96ce8e;
+
+.quote-wrapper {
+  border-radius: 4px;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.2);
+  margin-bottom: 40px;
+  color: @primary-color;
+
+  > div {
+    display: flex;
+  }
+
+  .materials-section {
+    .header {
+      background-color: @primary-bg;
+      border-top-left-radius: 4px;
+      border-bottom: solid 2px #e5e5e5;
+
+      > div {
+        display: flex;
+
+        > div {
+          flex: 1;
+
+          .customer-name {
+            font-size: 20px;
+            font-weight: 400;
+          }
+
+          .address {
+            font-size: 15px;
+            color: @secondary-color;
+          }
+        }
+
+        .btn-edit {
+          align-self: center;
+        }
+      }
+    }
+
+    .material-category {
+      .category-title {
+        background-color: @secondary-bg;
+        font-size: 15px;
+        font-weight: 500;
+      }
+
+      .material-list {
+        background-color: @primary-bg;
+        font-size: 13px;
+        color: @secondary-color;
+
+        > div {
+          border-bottom: solid 1px #e5e5e5;
+
+          > div:last-child {
+            color: @primary-color;
+            font-weight: 500;
+            text-align: right;
+            padding-right: 30px;
+          }
+        }
+      }
+    }
+
+    > div:last-child,
+    > div:last-child > div:last-child {
+      border-bottom-left-radius: 4px;
+    }
+  }
+
+  .quote-section {
+    background-color: @tertiary-bg;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    color: @tertiary-color;
+
+    .header {
+      > span {
+        font-size: 18px;
+        color: @primary-color;
+      }
+
+      > hr {
+        width: 40px;
+        border-bottom: 1px solid rgba(246, 246, 246, 0.3);
+        margin-top: 5px;
+        margin-bottom: 15px;
+      }
+    }
+
+    .quote-item {
+      display: flex;
+      padding: 7px 0;
+      border-bottom: 1px solid #8abd84;
+
+      > span:first-child {
+        flex: 1;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    .quote-total {
+      display: flex;
+      padding: 10px;
+      background-color: #8abd84;
+      border-radius: 2px;
+
+      > span:first-child {
+        flex: 1;
+      }
+    }
+
+    .quote-notes {
+      padding: 20px 0;
+
+      > textarea {
+        width: 100%;
+        height: 150px;
+        padding: 7px;
+        background-color: transparent;
+        border: 1px solid #8abd84;
+      }
+    }
+
+    .btn-quote {
+      width: 100%;
+    }
+  }
+
+  .vertical-padding {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+// lessc lib/ticket_quote/ticket_quote.less lib/ticket_quote/ticket_quote.css

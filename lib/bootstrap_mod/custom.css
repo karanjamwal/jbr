@@ -1,0 +1,77 @@
+.nav > li > a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  color: #fff;
+}
+.nav > li > a:hover,
+.nav > li > a:focus,
+.nav > li > a.active,
+.nav .open > a,
+.nav .open > a:focus,
+.nav .open > a:hover {
+  text-decoration: none;
+  background-color: transparent;
+  border-bottom: 4px solid #fbc958;
+}
+
+.page-header {
+  color: #4a4a4a;
+  border: none;
+  padding: 20px 0;
+  margin: 0;
+  text-align: right;
+}
+
+.ng-valid[required] :not(.login-panel) {
+  border-left: 5px solid #42A948; /* green */
+}
+
+input.ng-invalid[required] :not(.login-panel),
+textarea.ng-invalid[required] :not(.login-panel) {
+  border-left: 5px solid #a94442; /* red */
+}
+
+/*.ng-untouched {
+    border: 2px solid #424242;
+}
+*/
+
+.jobStatusDropdownButton {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #333333;
+  white-space: nowrap;
+}
+
+.regularPayrollTime {
+  color: #4A4A4A;
+  background-color: #E8E8E8;
+  border-left: #00b900 solid 3px;
+  width: 50%;
+  float: left;
+}
+
+.otPayrollTime {
+  color: #4A4A4A;
+  background-color: #E8E8E8;
+  border-left: #FF2F1A solid 3px;
+  width: 50%;
+  float: right;
+}
+
+.timeOnJob {
+  color: #4A4A4A;
+  background-color: #E8E8E8;
+  border-left: #196CF1 solid 3px;
+  height: 25px;
+  margin-bottom: 5px;
+}
+
+.timeOnJobNumber {
+  float: left;
+  padding-left: 5px;
+}

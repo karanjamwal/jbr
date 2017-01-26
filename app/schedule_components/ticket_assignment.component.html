@@ -1,0 +1,77 @@
+<!-- /.modal -->
+
+<div class="modal fade" id="ticketAssignmentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">{{selectedTicket?.poNumber}} - {{selectedTicket?.customer.customerName}}</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <!-- /. start date form -->
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <label class="control-label" for="startDate">Start Date</label>
+                        </div>
+                        <div class="col-lg-6">
+                            <label class="control-label" for="endDate">End Date</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <input type="text" id="startDate">
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="text" id="endDate">
+                        </div>
+                    </div>
+                    <!-- /. start date form -->
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            &nbsp;
+                        </div>
+                    </div>
+
+                    <!-- /. primary tech form -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <ticket-assignment-primary-tech [primaryTech]="primaryTech"></ticket-assignment-primary-tech>
+                        </div>
+                    </div>
+                    <!-- /. primary tech form -->
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            &nbsp;
+                        </div>
+                    </div>
+
+                    <!-- /. assistant tech form -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <ticket-assignment-assistant-techs [assistantTechs]="assistantTechs"></ticket-assignment-assistant-techs>
+                        </div>
+                    </div>
+                    <!-- /. assistant tech form -->
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            &nbsp;
+                        </div>
+                    </div>
+
+                    <input type="hidden" [value]="selectedTicket?.id" />
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" (click)="goToTicketDetails(selectedTicket)">Go To Details</button>
+                <button type="button" class="btn btn-default" (click)="closeModal()">Close</button>
+                <button type="button" class="btn btn-primary" (click)="ticketUpdated()">Save ticket</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- /.modal -->

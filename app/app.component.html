@@ -1,0 +1,12 @@
+<div class="app-container" [ngClass]="{'blue-bg': !isAuthenticated()}">
+    <navbar *ngIf="isAuthenticated()"></navbar>
+    <div protected id="page-wrapper"
+         class="container">
+        <div class="page-header"
+             *ngIf="isAuthenticated()">
+        </div>
+        <div class="page-body">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

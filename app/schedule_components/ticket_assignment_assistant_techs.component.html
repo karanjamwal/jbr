@@ -1,0 +1,15 @@
+<div class="form-group">
+    <label class="control-label">Assistant Technicians:</label>
+    <div id="typeaheadAssistantTechs" style="margin-bottom:40px;">
+        <input class="typeahead form-control" type="text" placeholder="Technician">
+    </div>
+    <div *ngFor="let tech of assistantTechs" class="row">
+        <div class="col-md-6">
+            <span>{{tech.name}}</span>
+        </div>
+        <div class="col-md-2"><i class="fa fa-minus-square" aria-hidden="true" (click)="removeTech(tech)" style="color: #D10000;"></i></div>
+        <div class="col-md-4">&nbsp;</div>
+    </div>
+</div>
+<input id="assistantSelected" type="hidden" />
+<input id="assistantSelectedButton" type="button" value="" (click)="assistedSelectedButton()" style="display:none;" />

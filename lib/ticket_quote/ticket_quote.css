@@ -1,0 +1,107 @@
+.quote-wrapper {
+  border-radius: 4px;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.2);
+  margin-bottom: 40px;
+  color: #1c272d;
+}
+.quote-wrapper > div {
+  display: flex;
+}
+.quote-wrapper .materials-section .header {
+  background-color: #ffffff;
+  border-top-left-radius: 4px;
+  border-bottom: solid 2px #e5e5e5;
+}
+.quote-wrapper .materials-section .header > div {
+  display: flex;
+}
+.quote-wrapper .materials-section .header > div > div {
+  flex: 1;
+}
+.quote-wrapper .materials-section .header > div > div .customer-name {
+  font-size: 20px;
+  font-weight: 400;
+}
+.quote-wrapper .materials-section .header > div > div .address {
+  font-size: 15px;
+  color: #959595;
+}
+.quote-wrapper .materials-section .header > div .btn-edit {
+  align-self: center;
+}
+.quote-wrapper .materials-section .material-category .category-title {
+  background-color: #f6f6f6;
+  font-size: 15px;
+  font-weight: 500;
+}
+.quote-wrapper .materials-section .material-category .material-list {
+  background-color: #ffffff;
+  font-size: 13px;
+  color: #959595;
+}
+.quote-wrapper .materials-section .material-category .material-list > div {
+  border-bottom: solid 1px #e5e5e5;
+}
+.quote-wrapper .materials-section .material-category .material-list > div > div:last-child {
+  color: #1c272d;
+  font-weight: 500;
+  text-align: right;
+  padding-right: 30px;
+}
+.quote-wrapper .materials-section > div:last-child,
+.quote-wrapper .materials-section > div:last-child > div:last-child {
+  border-bottom-left-radius: 4px;
+}
+.quote-wrapper .quote-section {
+  background-color: #96ce8e;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  color: #545454;
+}
+.quote-wrapper .quote-section .header > span {
+  font-size: 18px;
+  color: #1c272d;
+}
+.quote-wrapper .quote-section .header > hr {
+  width: 40px;
+  border-bottom: 1px solid rgba(246, 246, 246, 0.3);
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+.quote-wrapper .quote-section .quote-item {
+  display: flex;
+  padding: 7px 0;
+  border-bottom: 1px solid #8abd84;
+}
+.quote-wrapper .quote-section .quote-item > span:first-child {
+  flex: 1;
+}
+.quote-wrapper .quote-section .quote-item:last-child {
+  border-bottom: none;
+}
+.quote-wrapper .quote-section .quote-total {
+  display: flex;
+  padding: 10px;
+  background-color: #8abd84;
+  border-radius: 2px;
+}
+.quote-wrapper .quote-section .quote-total > span:first-child {
+  flex: 1;
+}
+.quote-wrapper .quote-section .quote-notes {
+  padding: 20px 0;
+}
+.quote-wrapper .quote-section .quote-notes > textarea {
+  width: 100%;
+  height: 150px;
+  padding: 7px;
+  background-color: transparent;
+  border: 1px solid #8abd84;
+}
+.quote-wrapper .quote-section .btn-quote {
+  width: 100%;
+}
+.quote-wrapper .vertical-padding {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}

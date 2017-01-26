@@ -1,0 +1,82 @@
+<div class="container-fluid ticket-modal-container">
+    <div class="row ticket-modal-header">
+        <div class="col-xs-12 padding-left-0">
+            <span class="ticket-modal-header-title">Create New Job</span>
+        </div>
+    </div>
+    <div class="row ticket-modal-body">
+        <div class="col-xs-7 text-center upload-section">
+            <div>
+                <span class="">Create Ticket from PDF</span>
+            </div>
+            <div class="col-xs-push-1 col-xs-10">
+                <ng-select #pdfTypeSelect
+                           [allowClear]="false"
+                           [disabled]="true"
+                           (selected)="pdfTypeSelected($event)"
+                           placeholder="Loading ...">
+                </ng-select>
+                <div *ngIf="tryCount > 0 && pdfTypeSelectedIndex < 0"
+                     class="alert alert-danger">
+                    PDF type is required
+                </div>
+            </div>
+            <div class="row spacer">
+            </div>
+            <div ng2FileDrop
+                 [ngClass]="{'upload-file-over': hasDropZoneOver}"
+                 (fileOver)="fileZoneOver($event)"
+                 [uploader]="pdfUploader"
+                 class="file-drop-zone">
+                <div class="row">
+                    <span class="pdf-box text-uppercase">PDF</span>
+                    <img class="pdf-image hidden" src="/assets/images/pdf_file.png">
+                </div>
+                <div class="row content-text">
+                    <h1>
+                        <span class="drag-drop text-uppercase">Drag & Drop</span>
+                        <span class="file-name hidden">
+                            Purchase Order-316289-614324.pdf
+                        </span>
+                    </h1>
+                </div>
+                <div class="row file-browse-text">
+                    <input #uploadFile
+                           class="hidden"
+                           type="file"
+                           accept="application/pdf"
+                           ng2FileSelect
+                           [uploader]="pdfUploader" />
+                    <span>your PDF here, or <a (click)="uploadFile.click()">browse here</a></span>
+                </div>
+            </div>
+            <div *ngIf="tryCount > 0 && pdfUploader.queue.length <= 0" class="alert alert-danger">
+                PDF file is required
+            </div>
+            <div class="row spacer">
+            </div>
+            <div>
+                <button #uploadButton
+                        id="uploadButton"
+                        type="button"
+                        class="btn btn-success text-uppercase btn-create-job"
+                        data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Uploading"
+                        data-processing-text="<i class='fa fa-circle-o-notch fa-spin'></i> Processing"
+                        (click)="uploadPdf()">
+                    Upload
+                </button>
+            </div>
+        </div>
+        <div class="col-xs-5 text-center manual-section">
+            <div>
+                <span class="">Manually Create Job</span>
+            </div>
+            <div>
+                <button class="btn btn-center btn-submit text-uppercase btn-create-job"
+                        (click)="addManualTicketClick()">
+                    Create Job
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

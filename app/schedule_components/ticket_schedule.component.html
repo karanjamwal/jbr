@@ -1,0 +1,111 @@
+<div class="row" id="scheduleLoading" style="display:none;">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8">
+        <div class="progress">
+            <div class="progress-bar progress-bar-success progress-bar-striped active"
+                 role="progressbar"
+                 aria-valuenow="100"
+                 aria-valuemin="0"
+                 aria-valuemax="100"
+                 style="width: 100%">
+                <span class="sr-only">40% Complete (success)</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-2"></div>
+</div>
+
+<!-- /. Week navigator -->
+<div class="row week-navbar">
+    <div class="col-md-2">
+        <button type="button" class="btn btn-primary btn-sm" (click)="goToLastWeek()">
+            <i class="fa fa-backward fa-fw"></i> BACK
+        </button>
+    </div>
+    <div class="col-md-8 region-select">
+        <div class="">
+            <span>Region</span>
+        </div>
+        <div class="btn-group">
+            <span *ngFor="let region of regions; let i = index;"
+                  [ngClass]="{ 'btn': true , 'btn-region': true, 'active': regionCurrentIndex == i }"
+                  (click)="onRegionSelected(region, i)">
+                {{ region }}
+            </span>
+        </div>
+    </div>
+    <div class="col-md-2 text-right">
+        <button type="button" class="btn btn-primary btn-sm" (click)="goToNextWeek()">
+            FORWARD <i class="fa fa-forward fa-fw"></i>
+        </button>
+    </div>
+</div>
+
+<!-- /. Schedule -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="dataTable_wrapper">
+            <table class="table table-bordered" id="dataTables-schedule">
+                <thead>
+                <tr class="weekHeader">
+                    <th class="region-name">
+                        {{ regions[regionCurrentIndex] }}
+                    </th>
+                    <th *ngFor="let wd of weekdays" [attr.class]="wd.status">
+                        <h4 class="text-uppercase">{{ wd.date.format('ddd') }}</h4>
+                        <h5>{{ wd.date.format('M/D') }}</h5>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let ts of technicianSchedules | RegionPipe:regions[regionCurrentIndex]; let tsIndex = index; let last = last;">
+                    <th>
+                        {{ ts.technician.name }}
+                    </th>
+                    <td *ngFor="let ds of ts.daySchedules; let i = index;" [attr.class]="weekdays[i].status + ' sortable'"
+                        [attr.data-technician-id]="ts.technician.id"
+                        [attr.data-day-index]="i">
+                        <div *ngFor="let _ticket of ds.tickets | PriorityPipe: weekdays[i].date.format('YYYY-MM-DD'); let buttonIndex = index;">
+                            <button class="btn"
+                                    [attr.data-ticket-id]="_ticket.id"
+                                    (click)="ticketAssignment.openModal(_ticket)" >
+                                #{{_ticket.poNumber}}
+                            </button>
+                        </div>
+                    </td>
+                    {{last ? onScheduleViewUpdated() : ''}}
+                </tr>
+                <tr *ngIf="technicianSchedules.length == 0">
+                    <td colspan=8 class="text-center">There are no jobs for this week</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- /.table-responsive -->
+
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /. Schedule -->
+
+<div class="row whitespace"></div>
+
+<div class="container unscheduled-jobs-wrapper">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="unscheduled-jobs"
+                 *ngIf="unscheduledTickets.length > 0">
+                <my-unscheduled-tickets
+                        [unscheduledTickets]="unscheduledTickets"
+                        [ticketAssignmentComp]="ticketAssignment">
+                </my-unscheduled-tickets>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Component for the ticket assignment modal -->
+<ticket-assignment
+        #ticketAssignment
+        (onTicketUpdated)="onTicketUpdated($event)">
+</ticket-assignment>

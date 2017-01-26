@@ -1,0 +1,127 @@
+<div class="remove-top-space-20 bottom-spacer-20 top-bar">
+    <div class="row">
+        <div class="col-md-10">
+            <div class="row">
+                <div *ngIf="tickets.filter(isSuspended).length > 0 && !hideSuspendedNotification"
+                     class="col-md-4">
+                    <div class="notification suspended">
+                        <span>
+                            <img src="/assets/images/dashboard/bell.png"> 1 Ticket Suspended
+                        </span>
+                        <a (click)="closeSuspendedNotification()">
+                            <img src="/assets/images/dashboard/close.png">
+                        </a>
+                    </div>
+                </div>
+                <div *ngIf="tickets.filter(isSubmitted).length > 0 && !hideSubmittedNotification"
+                     class="col-md-4">
+                    <div class="notification submitted">
+                        <span>
+                            <img src="/assets/images/dashboard/bell.png"> 1 Ticket Submitted For Approval
+                        </span>
+                        <a (click)="closeSubmittedNotification()">
+                            <img src="/assets/images/dashboard/close.png">
+                        </a>
+                    </div>
+                </div>
+                <div *ngIf="tickets.filter(isApproved).length > 0 && !hideApprovedNotification"
+                     class="col-md-4">
+                    <div class="notification approved">
+                        <span>
+                            <img src="/assets/images/dashboard/bell.png"> 1 Ticket Approved
+                        </span>
+                        <a (click)="closeApprovedNotification()">
+                            <img src="/assets/images/dashboard/close.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2 text-right">
+            <button type="button"
+                    class="btn btn-job"
+                    (click)="addTicketClick()">
+                Add Job
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Ticket KPIs -->
+<div class="row">
+    <div *ngFor="let panel of panels; let i = index;"
+         class="col-lg-3 col-md-6">
+        <div class="{{ i == selectedPanelIndex ? 'panel ' + panel.className + ' active' : 'panel ' + panel.className }}"
+             (click)="onPanelSelected(panel, i)">
+            <div class="panel-heading">
+                <div class="row text-right">
+                    <div class="col-xs-12 panel-title">{{ panel.title }}</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3 panel-icon">
+                        <i class="fa {{ panel.icon }} fa-4x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div class="panel-content">{{ panel.tickets.length }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Ticket KPIs -->
+
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="data_wrapper panel panel-default">
+            <table class="table table-hover" id="dataTables-dashboard" style="margin: 0 !important;">
+                <thead>
+                <tr>
+                    <th>PO #</th>
+                    <th>WO #</th>
+                    <th>Description</th>
+                    <th>Customer</th>
+                    <th>Date Opened</th>
+                    <th>Status</th>
+                    <th>Assigned To</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let ticket of tickets"
+                    [ngClass]="{'suspended': ticket.status == 'Suspended', 'submitted': ticket.status == 'Submitted For Approval', 'approved': ticket.status == 'Approved'}"
+                    (click)="goToTicketDetails(ticket)">
+                    <td>{{ticket.poNumber}}</td>
+                    <td>{{ticket.woNumber}}</td>
+                    <td>{{ticket.description}}</td>
+                    <td>{{ticket.customer?.customerName}}</td>
+                    <td>{{formatDateOpened(ticket.dateOpened)}}</td>
+                    <td>{{ticket.status}}</td>
+                    <td>{{formatTechName(ticket)}}</td>
+                </tr>
+                </tbody>
+            </table>
+            <!-- LOADING ANIMATION -->
+            <div class="row" id="createLoadingProgressBar"
+                 style="display:none;">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success progress-bar-striped active"
+                             role="progressbar"
+                             aria-valuenow="100"
+                             aria-valuemin="0"
+                             aria-valuemax="100"
+                             style="width: 100%">
+                            <span class="sr-only">40% Complete (success)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+        </div>
+        <!-- /.table-responsive -->
+    </div>
+    <!-- /.panel -->
+</div>
+<!-- /.col-lg-12 -->

@@ -1,0 +1,341 @@
+.week-navbar {
+  padding-bottom: 20px;
+  display: flex;
+}
+.week-navbar > div:first-child,
+.week-navbar > div:last-child {
+  align-self: center;
+}
+.week-navbar .region-select {
+  text-transform: uppercase;
+  text-align: center;
+}
+.week-navbar .region-select > div:first-child {
+  font-size: 14px;
+  font-weight: 500;
+  color: #636363;
+  margin-bottom: 10px;
+}
+.weekHeader th {
+  text-align: center;
+}
+.region-name {
+  vertical-align: middle;
+  font-weight: 500;
+}
+.btn-region {
+  color: #636363;
+  background-color: #fff;
+  border-color: #636363;
+}
+.btn-region:hover {
+  background-color: #e6e6e6;
+}
+.btn-region:active,
+.btn-region.active {
+  color: #fff;
+  background-color: #636363;
+}
+td div {
+  margin-bottom: 8px;
+}
+td div:last-child {
+  margin-bottom: 0;
+}
+td button {
+  width: 100%;
+}
+th {
+  background-color: #fff;
+  font-weight: 400;
+}
+th.previous,
+td.previous {
+  background-color: #fff;
+  color: #a0a0a0;
+}
+th.previous button,
+td.previous button {
+  color: #7e7e7e;
+  background-color: #e4e4e4;
+  border-color: #cbcbcb;
+}
+th.previous button:focus,
+td.previous button:focus,
+th.previous button.focus,
+td.previous button.focus {
+  color: #7e7e7e;
+  background-color: #cbcbcb;
+  border-color: #8b8b8b;
+}
+th.previous button:hover,
+td.previous button:hover {
+  color: #7e7e7e;
+  background-color: #cbcbcb;
+  border-color: #acacac;
+}
+th.previous button:active,
+td.previous button:active,
+th.previous button.active,
+td.previous button.active,
+.open > .dropdown-toggleth.previous button,
+.open > .dropdown-toggletd.previous button {
+  color: #7e7e7e;
+  background-color: #cbcbcb;
+  border-color: #acacac;
+}
+th.previous button:active:hover,
+td.previous button:active:hover,
+th.previous button.active:hover,
+td.previous button.active:hover,
+.open > .dropdown-toggleth.previous button:hover,
+.open > .dropdown-toggletd.previous button:hover,
+th.previous button:active:focus,
+td.previous button:active:focus,
+th.previous button.active:focus,
+td.previous button.active:focus,
+.open > .dropdown-toggleth.previous button:focus,
+.open > .dropdown-toggletd.previous button:focus,
+th.previous button:active.focus,
+td.previous button:active.focus,
+th.previous button.active.focus,
+td.previous button.active.focus,
+.open > .dropdown-toggleth.previous button.focus,
+.open > .dropdown-toggletd.previous button.focus {
+  color: #7e7e7e;
+  background-color: #b9b9b9;
+  border-color: #8b8b8b;
+}
+th.previous button:active,
+td.previous button:active,
+th.previous button.active,
+td.previous button.active,
+.open > .dropdown-toggleth.previous button,
+.open > .dropdown-toggletd.previous button {
+  background-image: none;
+}
+th.previous button.disabled:hover,
+td.previous button.disabled:hover,
+th.previous button[disabled]:hover,
+td.previous button[disabled]:hover,
+fieldset[disabled] th.previous button:hover,
+fieldset[disabled] td.previous button:hover,
+th.previous button.disabled:focus,
+td.previous button.disabled:focus,
+th.previous button[disabled]:focus,
+td.previous button[disabled]:focus,
+fieldset[disabled] th.previous button:focus,
+fieldset[disabled] td.previous button:focus,
+th.previous button.disabled.focus,
+td.previous button.disabled.focus,
+th.previous button[disabled].focus,
+td.previous button[disabled].focus,
+fieldset[disabled] th.previous button.focus,
+fieldset[disabled] td.previous button.focus {
+  background-color: #e4e4e4;
+  border-color: #cbcbcb;
+}
+th.previous button .badge,
+td.previous button .badge {
+  color: #e4e4e4;
+  background-color: #7e7e7e;
+}
+th.today,
+td.today {
+  background-color: #ebebeb;
+  color: #2a456e;
+}
+th.today button,
+td.today button {
+  color: #fff;
+  background-color: #0072bc;
+  border-color: #005389;
+}
+th.today button:focus,
+td.today button:focus,
+th.today button.focus,
+td.today button.focus {
+  color: #fff;
+  background-color: #005389;
+  border-color: #00060a;
+}
+th.today button:hover,
+td.today button:hover {
+  color: #fff;
+  background-color: #005389;
+  border-color: #002e4c;
+}
+th.today button:active,
+td.today button:active,
+th.today button.active,
+td.today button.active,
+.open > .dropdown-toggleth.today button,
+.open > .dropdown-toggletd.today button {
+  color: #fff;
+  background-color: #005389;
+  border-color: #002e4c;
+}
+th.today button:active:hover,
+td.today button:active:hover,
+th.today button.active:hover,
+td.today button.active:hover,
+.open > .dropdown-toggleth.today button:hover,
+.open > .dropdown-toggletd.today button:hover,
+th.today button:active:focus,
+td.today button:active:focus,
+th.today button.active:focus,
+td.today button.active:focus,
+.open > .dropdown-toggleth.today button:focus,
+.open > .dropdown-toggletd.today button:focus,
+th.today button:active.focus,
+td.today button:active.focus,
+th.today button.active.focus,
+td.today button.active.focus,
+.open > .dropdown-toggleth.today button.focus,
+.open > .dropdown-toggletd.today button.focus {
+  color: #fff;
+  background-color: #003d65;
+  border-color: #00060a;
+}
+th.today button:active,
+td.today button:active,
+th.today button.active,
+td.today button.active,
+.open > .dropdown-toggleth.today button,
+.open > .dropdown-toggletd.today button {
+  background-image: none;
+}
+th.today button.disabled:hover,
+td.today button.disabled:hover,
+th.today button[disabled]:hover,
+td.today button[disabled]:hover,
+fieldset[disabled] th.today button:hover,
+fieldset[disabled] td.today button:hover,
+th.today button.disabled:focus,
+td.today button.disabled:focus,
+th.today button[disabled]:focus,
+td.today button[disabled]:focus,
+fieldset[disabled] th.today button:focus,
+fieldset[disabled] td.today button:focus,
+th.today button.disabled.focus,
+td.today button.disabled.focus,
+th.today button[disabled].focus,
+td.today button[disabled].focus,
+fieldset[disabled] th.today button.focus,
+fieldset[disabled] td.today button.focus {
+  background-color: #0072bc;
+  border-color: #005389;
+}
+th.today button .badge,
+td.today button .badge {
+  color: #0072bc;
+  background-color: #fff;
+}
+th.upcoming,
+td.upcoming {
+  background-color: #fff;
+  color: #5b5b5b;
+}
+th.upcoming button,
+td.upcoming button {
+  color: #fff;
+  background-color: #656c7e;
+  border-color: #4e5462;
+}
+th.upcoming button:focus,
+td.upcoming button:focus,
+th.upcoming button.focus,
+td.upcoming button.focus {
+  color: #fff;
+  background-color: #4e5462;
+  border-color: #16171b;
+}
+th.upcoming button:hover,
+td.upcoming button:hover {
+  color: #fff;
+  background-color: #4e5462;
+  border-color: #333740;
+}
+th.upcoming button:active,
+td.upcoming button:active,
+th.upcoming button.active,
+td.upcoming button.active,
+.open > .dropdown-toggleth.upcoming button,
+.open > .dropdown-toggletd.upcoming button {
+  color: #fff;
+  background-color: #4e5462;
+  border-color: #333740;
+}
+th.upcoming button:active:hover,
+td.upcoming button:active:hover,
+th.upcoming button.active:hover,
+td.upcoming button.active:hover,
+.open > .dropdown-toggleth.upcoming button:hover,
+.open > .dropdown-toggletd.upcoming button:hover,
+th.upcoming button:active:focus,
+td.upcoming button:active:focus,
+th.upcoming button.active:focus,
+td.upcoming button.active:focus,
+.open > .dropdown-toggleth.upcoming button:focus,
+.open > .dropdown-toggletd.upcoming button:focus,
+th.upcoming button:active.focus,
+td.upcoming button:active.focus,
+th.upcoming button.active.focus,
+td.upcoming button.active.focus,
+.open > .dropdown-toggleth.upcoming button.focus,
+.open > .dropdown-toggletd.upcoming button.focus {
+  color: #fff;
+  background-color: #3e434e;
+  border-color: #16171b;
+}
+th.upcoming button:active,
+td.upcoming button:active,
+th.upcoming button.active,
+td.upcoming button.active,
+.open > .dropdown-toggleth.upcoming button,
+.open > .dropdown-toggletd.upcoming button {
+  background-image: none;
+}
+th.upcoming button.disabled:hover,
+td.upcoming button.disabled:hover,
+th.upcoming button[disabled]:hover,
+td.upcoming button[disabled]:hover,
+fieldset[disabled] th.upcoming button:hover,
+fieldset[disabled] td.upcoming button:hover,
+th.upcoming button.disabled:focus,
+td.upcoming button.disabled:focus,
+th.upcoming button[disabled]:focus,
+td.upcoming button[disabled]:focus,
+fieldset[disabled] th.upcoming button:focus,
+fieldset[disabled] td.upcoming button:focus,
+th.upcoming button.disabled.focus,
+td.upcoming button.disabled.focus,
+th.upcoming button[disabled].focus,
+td.upcoming button[disabled].focus,
+fieldset[disabled] th.upcoming button.focus,
+fieldset[disabled] td.upcoming button.focus {
+  background-color: #656c7e;
+  border-color: #4e5462;
+}
+th.upcoming button .badge,
+td.upcoming button .badge {
+  color: #656c7e;
+  background-color: #fff;
+}
+.unscheduled-jobs-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (max-width: 767px) {
+  .unscheduled-jobs-wrapper {
+    width: 100%;
+  }
+}
+.unscheduled-jobs {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.5);
+}

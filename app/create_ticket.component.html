@@ -1,0 +1,135 @@
+<div class="row">
+    <div class="col-lg-12">
+        <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
+                <h1 class="bottom-spacer-20 text-right">
+                    Create Job
+                </h1>
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+        <form class="inline">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <div class="form-group">
+                        <label>Purchase Order Number</label>
+                        <input [(ngModel)]="ticket.poNumber"
+                               name="poNumber"
+                               #poNumber="ngModel"
+                               type="text"
+                               class="form-control"
+                               placeholder="09876"
+                               required>
+                        <div *ngIf="poNumber.errors && (poNumber.dirty || poNumber.touched)"
+                             class="alert alert-danger">
+                            Purchase Order number is required
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <div class="form-group">
+                        <label>Work Order Number</label>
+                        <input [(ngModel)]="ticket.woNumber" name="woNumber" #woNumber="ngModel"
+                               type="text"
+                               class="form-control"
+                               placeholder="09876"
+                               required>
+                        <div *ngIf="woNumber.errors && (woNumber.dirty || woNumber.touched)"
+                             class="alert alert-danger">
+                            Work Order number is required
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <div class="form-group">
+                        <h3>Customer</h3>
+                        <div id="typeaheadCustomers">
+                            <input [(ngModel)]="ticket.customer.customerName"
+                                   name="customerNumber"
+                                   #customerNumber="ngModel"
+                                   class="typeahead form-control"
+                                   type="text"
+                                   placeholder="Customer name"
+                                   required>
+                        </div>
+                        <div *ngIf="customerNumber.errors && (customerNumber.dirty || customerNumber.touched)"
+                             class="alert alert-danger">
+                            Customer is required
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <h3>Job Details</h3>
+                    <hr />
+                    <div class="form-group">
+                        <label for="workDescription">Job Description</label>
+                        <textarea [(ngModel)]="ticket.workDescription"
+                                  id="workDescription"
+                                  name="workDescription"
+                                  #workDescription="ngModel"
+                                  class="form-control"
+                                  rows="5"
+                                  required></textarea>
+                        <div *ngIf="workDescription.errors && (workDescription.dirty || workDescription.touched)"
+                             class="alert alert-danger">
+                            Job Description is required
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+            <div class="row" id="createLoadingProgressBar" style="display:none;">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success progress-bar-striped active"
+                             role="progressbar"
+                             aria-valuenow="100"
+                             aria-valuemin="0"
+                             aria-valuemax="100"
+                             style="width: 100%">
+                            <span class="sr-only">40% Complete (success)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+            <div class="row"
+                 *ngIf="poNumber.valid && woNumber.valid && customerNumber.valid && workDescription.valid">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-2">
+                    <button class="btn btn-success btn-lg"
+                            id="createButton"
+                            (click)="createTicket()">
+                        CREATE JOB
+                    </button>
+                </div>
+                <div class="col-lg-8"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">&nbsp;</div>
+            </div>
+        </form>
+    </div>
+</div>
+<input id="customerSelected"
+       type="hidden" />
+<input id="customerSelectedButton"
+       type="button"
+       value=""
+       (click)="customerSelectedButton()"
+       style="display:none;" />

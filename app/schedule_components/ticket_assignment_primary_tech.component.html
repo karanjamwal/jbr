@@ -1,0 +1,15 @@
+<div class="form-group">
+    <label class="control-label">Primary Technican:</label>
+    <div id="typeaheadPrimaryTech">
+        <input class="typeahead form-control" type="text" placeholder="Technician">
+    </div>
+    <div id="primaryTechContainer" class="row">
+        <div class="col-md-6">
+            <span>{{primaryTech.name}}</span>
+        </div>
+        <div class="col-md-2"><i class="fa fa-minus-square" aria-hidden="true" (click)="removePrimaryTech()" style="color: #D10000;"></i></div>
+        <div class="col-md-4">&nbsp;</div>
+    </div>
+</div>
+<input id="primarySelected" type="hidden" />
+<input id="primarySelectedButton" type="button" value="" (click)="primarySelectedButton()" style="display:none;" />

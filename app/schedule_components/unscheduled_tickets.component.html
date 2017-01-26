@@ -1,0 +1,24 @@
+<div class="header">
+    <span>Unscheduled Jobs</span>
+    <a class="pull-right" (click)="toggleBody()">
+        <i class='fa' [ngClass]="{'fa-angle-double-down': !bodyHidden, 'fa-angle-double-up': bodyHidden}"></i>
+    </a>
+</div>
+
+<div class="body">
+    <div class=""
+         *ngFor="let ticket of unscheduledTickets; let last = last;"
+         (click)="onTicketClick(ticket)"
+         (window:resize)="onBodyResize()">
+        <div>
+            <div>
+                <span class="customer-name">{{ ticket.customer.customerName }}</span>
+            </div>
+            <div>
+                <span class="description">{{ ticket.description }}</span>
+            </div>
+        </div>
+        <a class="btn btn-po-number">PO# {{ ticket.poNumber }}</a>
+        {{last ? onBodyResize() : ''}}
+    </div>
+</div>
